@@ -1,0 +1,107 @@
+/* SeatPicker.css */
+
+.seat-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Screen */
+.screen {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.screen-line {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(229,9,20,0.6), transparent);
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(229,9,20,0.3);
+  margin-bottom: 8px;
+}
+.screen span {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 4px;
+}
+
+/* Grid */
+.seat-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-label {
+  width: 20px;
+  text-align: right;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.seats {
+  display: flex;
+  gap: 6px;
+}
+
+/* Individual Seat */
+.seat {
+  width: 32px;
+  height: 28px;
+  border-radius: 6px 6px 4px 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.seat-available {
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border);
+}
+.seat-available:hover {
+  background: rgba(229,9,20,0.2);
+  border-color: var(--accent);
+  transform: scale(1.1);
+}
+
+.seat-selected {
+  background: var(--accent);
+  border: 1.5px solid var(--accent-hover);
+  transform: scale(1.05);
+}
+
+.seat-booked {
+  background: #2a2a3a;
+  border: 1.5px solid #333;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Legend */
+.seat-legend {
+  display: flex;
+  gap: 24px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.legend-box {
+  width: 24px;
+  height: 20px;
+  pointer-events: none;
+}
